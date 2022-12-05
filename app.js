@@ -33,13 +33,15 @@ p2Button.addEventListener('click', () => {
 // Change event for winning score
 winningScoreSelect.addEventListener('change', function () {
   winningScore = parseInt(this.value);
+  reset();
 });
 
 // Reset functionality
-resetButton.addEventListener('click', () => {
+resetButton.addEventListener('click', reset);
+function reset() {
   isGameOver = false;
   p1Score = 0;
   p2Score = 0;
   p1Display.textContent = p1Score;
   p2Display.textContent = p2Score;
-});
+}
