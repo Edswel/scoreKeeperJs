@@ -3,6 +3,7 @@ const p2Button = document.querySelector('#p2Button');
 const p1Display = document.querySelector('#p1Display');
 const p2Display = document.querySelector('#p2Display');
 const resetButton = document.querySelector('#reset');
+const winningScoreSelect = document.querySelector('#play-to');
 
 let p1Score = 0;
 let p2Score = 0;
@@ -29,6 +30,12 @@ p2Button.addEventListener('click', () => {
   }
 });
 
+// Change event for winning score
+winningScoreSelect.addEventListener('change', function () {
+  winningScore = parseInt(this.value);
+});
+
+// Reset functionality
 resetButton.addEventListener('click', () => {
   isGameOver = false;
   p1Score = 0;
