@@ -5,23 +5,53 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="styles.css">
   <title>Score Keeper</title>
 </head>
 
 <body>
-  <h1>Scores...</h1>
-  <h2><span id="p1Display">0</span> - <span id="p2Display">0</span></h2>
-  <select name="" id="play-to">
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-  </select>
-  <button id="p1Button">+1 Player 1</button>
-  <button id="p2Button">+1 Player 2</button>
-  <button id="reset">RESET</button>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1">
+                <img
+                  src="https://images.pexels.com/photos/899317/pexels-photo-899317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="">
+              </figure>
+            </div>
+            <header class="card-header">
+              <p class="card-header-title">Scores...</p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                <h1 class="title is-1 has-text-centered"><span id="p1Display">0</span> - <span id="p2Display">0</span>
+                </h1>
+                <label class="label is-large is-inline has-text-centered" for="play-to">Playing to</label>
+                <div class="select rounded">
+                  <select name="" id="play-to">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <button id="p1Button" class="is-primary button card-footer-item">+1 Player One</button>
+              <button id="p2Button" class="is-info button card-footer-item">+1 Player Two</button>
+              <button id="reset" class="is-danger button card-footer-item">RESET</button>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <script src="app.js"></script>
 </body>
