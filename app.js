@@ -48,12 +48,10 @@ winningScoreSelect.addEventListener('change', function () {
 resetButton.addEventListener('click', reset);
 function reset() {
   isGameOver = false;
-  p1Score = 0;
-  p2Score = 0;
-  p1Display.textContent = p1Score;
-  p2Display.textContent = p2Score;
-  p1Display.classList.remove('winner', 'loser');
-  p2Display.classList.remove('loser', 'winner');
-  p1Button.disabled = false;
-  p2Button.disabled = false;
+  for (let p of [p1, p2]) {
+    p.score = 0;
+    p.display.textContent = 0;
+    p.display.classList.remove('winner', 'loser');
+    p.button.disabled = false;
+  }
 }
